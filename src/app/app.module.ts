@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PictureListComponent } from './picture-list/picture-list.component';
 import { LoginComponent } from './login/login.component';
+import {HttpClientModule} from '@angular/common/http';
+import { PictureElementComponent } from './picture-element/picture-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PictureListComponent,
-    LoginComponent
+    LoginComponent,
+    PictureElementComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

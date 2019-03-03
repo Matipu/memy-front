@@ -1,3 +1,6 @@
-<p>
-  picture-list works!
-</p>
+<div *ngFor="let picture of picturesPage">
+  <app-picture-element
+    [pictureData]="picture">
+  </app-picture-element>
+
+</div>

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {MemyBackConnectionService} from '../services/connection/memy-back-connection.service';
+import {PicturesData} from '../services/connection/model/pictures/pictures';
 
 @Component({
   selector: 'app-picture-list',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PictureListComponent implements OnInit {
 
-  constructor() { }
+  private memyConnection: MemyBackConnectionService;
+  picturesPage: PicturesData[];
 
-  ngOnInit() {
+  constructor(memyConnection: MemyBackConnectionService) {
+    this.memyConnection = memyConnection;
   }
 
+  ngOnInit() {
+    this.memyConnection.getPictures(1)
+      .subscribe(pictures => {
+        this.picturesPage = pictures;
+      });
+  }
 }

@@ -1,0 +1,83 @@
+@headerWidth: 70px;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat/Montserrat-Regular.otf') format("opentype");
+}
+
+body {
+  font-family: 'Montserrat', 'Source Sans Pro', Arial, sans, serif;
+  background-color: #555555;
+  margin-top: @headerWidth + 10px;
+}
+
+.header {
+  width: 100%;
+  height: @headerWidth;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #333;
+}
+
+input[type=text] {
+  font-family: 'Montserrat', 'Source Sans Pro', Arial, sans, serif;
+  padding: 16px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid grey;
+  width: 30%;
+  left: 20%;
+  margin: 5px;
+  position: relative;
+  background: #555555;
+  border-radius: 25px;
+  float: left;
+}
+
+.header li {
+  background-color: #333;
+  width: 100px;
+  color: #aa3333;
+  font-size: 20px;
+  text-align: center;
+  line-height: @headerWidth;
+  float: left;
+  border-right: 1px black solid;
+  text-decoration: none;
+  height: 70px;
+  list-style-type: none;
+  font-variant: small-caps;
+}
+
+.header li:hover {
+  cursor: default;
+  background-color: #222;
+}
+
+
+.header .loginPanel {
+  float: right;
+}
+.header .loginPanel button {
+  font-family: 'Montserrat', 'Source Sans Pro', Arial, sans, serif;
+  border: none;
+  height: 50px;
+  margin: 10px 10px 10px 0px;
+  width: 100px;
+  border-radius: 10px;
+}
+
+.header .loginPanel .registerButton{
+  background-color: #4CAF50;
+}
+.header .loginPanel .loginButton{
+  background-color: #f44336;
+}
+
+.header .loginPanel .registerButton:hover{
+  background-color: #3C9F40;
+}
+.header .loginPanel .loginButton:hover{
+  background-color: #e43326;
+}
