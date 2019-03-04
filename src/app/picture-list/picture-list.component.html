@@ -1,6 +1,12 @@
-<div *ngFor="let picture of picturesPage">
-  <app-picture-element
-    [pictureData]="picture">
-  </app-picture-element>
+<app-tags-list>
+</app-tags-list>
 
+
+<div class="pictureList">
+    <div *ngFor="let picture of picturesPage">
+        <app-picture-element
+          [pictureData]="picture">
+        </app-picture-element>
+      </div>
 </div>
+
